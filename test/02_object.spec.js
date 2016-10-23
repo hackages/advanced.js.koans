@@ -19,6 +19,7 @@ xdescribe("About Objects", function () {
     });
   });
 
+
   it("should know properties that are functions act like methods", function () {
     var megalomaniac = {
       mastermind : "Brain",
@@ -60,7 +61,9 @@ xdescribe("About Objects", function () {
     });
 
     it("should have the bomb", function () {
+
       var hasBomb = "theBomb" in megalomaniac;
+
       expect(hasBomb).toBe(___);
     });
 

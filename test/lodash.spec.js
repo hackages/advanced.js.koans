@@ -12,7 +12,7 @@ describe('Underscore library', ()=>{
     it('Should return the same value that has been passed', ()=>{
       expect(_.identity(1)).equal(1);
       expect(_.identity({})).to.deep.equal({});
-      expect(_.identity('philos')).to.deep.equal('philos');
+      expect(_.identity('hackages')).to.deep.equal('hackages');
     })
   });
 
@@ -20,7 +20,7 @@ describe('Underscore library', ()=>{
 
     let items;
     beforeEach(function(){
-      items = [1,9, 10, true, 'Hacklunch', {name: 'Philos'}];
+      items = [1,9, 10, true, 'Hacklunch', {name: 'Hackages'}];
     });
 
     it('Should throw an error if no argument is passed', ()=>{
@@ -45,7 +45,7 @@ describe('Underscore library', ()=>{
     let items;
 
     beforeEach(function(){
-      items = [1,9, 10, true, 'Hacklunch', {name: 'Philos'}];
+      items = [1,9, 10, true, 'Hacklunch', {name: 'Hackages'}];
     });
 
     it('Should throw an error if no collection is passed', ()=>{
@@ -55,14 +55,14 @@ describe('Underscore library', ()=>{
     });
 
     it('Should return the last element of the collection', ()=>{
-        expect(_.last(items)).to.deep.equal({name: 'Philos'});
+        expect(_.last(items)).to.deep.equal({name: 'Hackages'});
     });
 
     it('Should return the last n elements when a second argument is passed', ()=>{
-      expect(_.last(items, 0)).to.deep.equal({name: 'Philos'});
-      expect(_.last(items, 1)).to.deep.equal([{name: 'Philos'}]);
-      expect(_.last(items, 2)).to.deep.equal(['Hacklunch', {name: 'Philos'}]);
-      expect(_.last(items, 3)).to.deep.equal([true,'Hacklunch', {name: 'Philos'}]);
+      expect(_.last(items, 0)).to.deep.equal({name: 'Hackages'});
+      expect(_.last(items, 1)).to.deep.equal([{name: 'Hackages'}]);
+      expect(_.last(items, 2)).to.deep.equal(['Hacklunch', {name: 'Hackages'}]);
+      expect(_.last(items, 3)).to.deep.equal([true,'Hacklunch', {name: 'Hackages'}]);
     });
   });
 
@@ -75,7 +75,7 @@ describe('Underscore library', ()=>{
     });
 
     it('Should return false when passed anything else', ()=>{
-      expect(_.isArray("Bootcamp by Philos")).to.equal(false);
+      expect(_.isArray("Bootcamp by Hackages")).to.equal(false);
       expect(_.isArray({})).to.equal(false);
       expect(_.isArray(12)).to.equal(false);
       expect(_.isArray(false)).to.equal(false);

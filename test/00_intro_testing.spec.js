@@ -3,47 +3,51 @@
 **/
 var expect = require('chai').expect;
 
+// documentation for the chai#expect http://chaijs.com/api/bdd/
 
-xdescribe('Introductio to Mocha and WallabyJS', function() {
+describe('Introductio to Mocha and WallabyJS', function() {
 
   // You can disable test by adding an 'x' in front of the runner
-  it('Disable this test', function(){
-    var disabled = false;
-    expect(disabled).toBeTruthy();
+  xit('Disable this test', function(){
+    var disabled = __;
+    expect(disabled).to.be.false;
   });
 
   // We shall contemplate truth by testing reality, via spec expectations.
-  xit('should expect true', function() {
-    expect(false).toBeTruthy();
+  xit('true vs false', function() {
+    let truth = __;
+    let falsy = __;
+    expect(truth).to.be.ok;
+    expect(falsy).to.not.be.ok;
   });
 
   xit('List all the falsy values in JavaScript', function() {
-    expect('').toBeFalsy();
+    let falsy = __;
+    expect(falsy).to.not.be.ok;
+    falsy = __;
+    expect(falsy).to.not.be.ok;
+    falsy = __;
+    expect(falsy).to.not.be.ok;
+    falsy = __;
+    expect(falsy).to.not.be.ok;
+    falsy = __;
+    expect(falsy).to.not.be.ok;
   });
 
   // Expected value versus actual value
   xit('should expect equality', function() {
-    var expectedValue = ___;
-    var actualValue = 1 + 1;
+    let expectedValue = __;
+    let actualValue = 1 + 1;
 
-    expect(actualValue === expectedValue).toBeTruthy();
-  });
-
-  // Some ways of asserting equality are better than others.
-  xit('should assert equality a better way', function() {
-    var expectedValue = ___;
-    var actualValue = 1 + 1;
-
-  // toEqual() compares using common sense equality.
-    expect(actualValue).toEqual(expectedValue);
+    expect(actualValue === expectedValue).to.be.ok;
   });
 
   // Sometimes you need to be precise about what you "type."
   xit('should assert equality with ===', function() {
-    var expectedValue = '2';
-    var actualValue = (1 + 1).toString();
+    let expectedValue = __;
+    let actualValue = (1 + 1).toString();
 
   // toBe() will always use === to compare.
-    expect(actualValue).toBe(expectedValue);
+    expect(actualValue).to.equal(expectedValue);
   });
 });

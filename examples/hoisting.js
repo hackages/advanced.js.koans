@@ -8,7 +8,7 @@ function Company(){
 
   var init = function(){
     this.employees.push('Davy');
-    this.employees.push('Max');
+    this.employees.push('Alex');
   }
 }
 

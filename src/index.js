@@ -1,3 +1,4 @@
+
 // TODO: Implement these fonctions and make them available for using in the web and for node
 
 /**
@@ -89,7 +90,9 @@ function forEach(collection, callback){
 ** @param {array}
 ** @return {array}
 **/
-function map(collection, callback){}
+function map(collection, callback){
+
+}
 
 /**
 ** @author {your name}
@@ -97,7 +100,9 @@ function map(collection, callback){}
 ** @param {array}
 ** @return {object} or {undefined}
 **/
-function find(collection, predicate){}
+function find(collection, predicate){
+
+}
 
 /**
 ** @author {your name}
@@ -105,7 +110,8 @@ function find(collection, predicate){}
 ** @param {array}
 ** @return {object} or {undefined}
 **/
-function reduce(collection, callback, acc){}
+function reduce(collection, callback, acc){
+}
 
 /**
 ** @author {your name}
@@ -113,7 +119,8 @@ function reduce(collection, callback, acc){}
 ** @param {array}
 ** @return {object} or {undefined}
 **/
-function contains(collection, predicate){}
+function contains(collection, predicate){
+}
 
 /**
 ** @author {your name}
@@ -121,7 +128,9 @@ function contains(collection, predicate){}
 ** @param {array}
 ** @return {object} or {undefined}
 **/
-function extend(){}
+function extend(){
+}
+
 
 
 /**
@@ -130,7 +139,9 @@ function extend(){}
 ** @param {array}
 ** @return {array}
 **/
-function findIndex(collection, predicate){}
+function findIndex(collection, predicate){
+
+}
 
 /**
 ** @author {your name}
@@ -138,7 +149,9 @@ function findIndex(collection, predicate){}
 ** @param {array}
 ** @return {array}
 **/
-function fill(collection, predicate){}
+function fill(collection, predicate){
+
+}
 
 /**
 ** @author {your name}
@@ -146,7 +159,9 @@ function fill(collection, predicate){}
 ** @param {array}
 ** @return {array}
 **/
-function keys(collection){}
+function keys(collection){
+
+}
 
 /**
 ** @author {your name}
@@ -154,7 +169,9 @@ function keys(collection){}
 ** @param {array}
 ** @return {array}
 **/
-function values(collection){}
+function values(collection){
+
+}
 
 /**
 ** @author {your name}
@@ -162,4 +179,6 @@ function values(collection){}
 ** @param
 ** @return
 **/
-function entries(collection){}
+function entries(collection){
+
+}

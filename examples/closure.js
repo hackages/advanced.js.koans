@@ -11,5 +11,7 @@ for (var i = 0; i < 5; i++) {
   }
 }
 
+console.log(func[0]);
+
 
 // How do you solve this issue?
