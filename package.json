@@ -6,7 +6,6 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-loader": "^5.4.2",
@@ -20,10 +19,11 @@
     "node-inspector": "^0.12.5",
     "npm-run-all": "^3.1.1",
     "sinon": "^1.17.2",
-    "wallaby-webpack": "0.0.9"
+    "wallaby-webpack": "0.0.9",
+    "yarn": "^0.16.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --compilers js:babel/register -w",
+    "test": "mocha --compilers js:babel/register -w",
     "docs": "esdoc -c esdoc.json && open ./esdoc/index.html",
     "live": "live-server",
     "build": "webpack -w",
