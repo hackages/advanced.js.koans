@@ -1,58 +1,58 @@
-var expect = require('chai').expect;
+const expect = require('chai').expect;
 
-xdescribe("About Objects", function () {
+describe("About Objects", () => {
 
-  describe("Properties", function () {
-    var megalomaniac;
+  xdescribe("Properties", () => {
+    let megalomaniac;
 
-    beforeEach(function () {
+    beforeEach(() => {
        megalomaniac = {  mastermind: "Joker", henchwoman: "Harley" };
     });
 
-    it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe(___);
+    it("should confirm objects are collections of properties", () => {
+      expect(megalomaniac.mastermind).to.equal(___);
     });
 
-    it("should confirm that properties are case sensitive", function () {
-      expect(megalomaniac.henchwoman).toBe(___);
-      expect(megalomaniac.henchWoman).toBe(___);
+    it("should confirm that properties are case sensitive", () => {
+      expect(megalomaniac.henchwoman).to.equal(___);
+      expect(megalomaniac.henchWoman).to.equal(___);
+    });
+
+    it("should know that properties can be added and deleted", () => {
+      const megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
+
+      expect("secretary" in megalomaniac).to.equal(__);
+
+      megalomaniac.secretary = "Agent Smith";
+      expect("secretary" in megalomaniac).to.equal(__);
+
+      delete megalomaniac.henchman;
+      expect("henchman" in megalomaniac).to.deep.equal(__);
     });
   });
 
+  xdescribe("'this' context", () => {
+    it("should confirm that when a function is attached to an object, 'this' refers to the object", () => {
+      let currentDate = new Date();
+      let currentYear = (currentDate.getFullYear());
+      let megalomaniac = {
+        mastermind: "James Wood",
+        henchman: "Adam West",
+        birthYear: 1970,
+        calculateAge: () => {
+          return currentYear - this.birthYear;
+        }
+      };
 
-  it("should know properties that are functions act like methods", function () {
-    var megalomaniac = {
-      mastermind : "Brain",
-      henchman: "Pinky",
-      battleCry: function (noOfBrains) {
-        return "They are " + this.henchman + " and the" +
-          Array(noOfBrains + 1).join(" " + this.mastermind);
-      }
-    };
-
-    var battleCry = megalomaniac.battleCry(4);
-    expect(___).toMatch(battleCry);
+      expect(currentYear).to.deep.equal(__);
+      expect(megalomaniac.calculateAge()).to.deep.equal(__);
+    });
   });
 
-  it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
-    var currentDate = new Date();
-    var currentYear = (currentDate.getFullYear());
-    var megalomaniac = {
-      mastermind: "James Wood",
-      henchman: "Adam West",
-      birthYear: 1970,
-      calculateAge: function () {
-        return currentYear - this.birthYear;
-      }
-    };
+  xdescribe("'in' keyword", () => {
+    let megalomaniac;
 
-    expect(currentYear).toBe(___);
-    expect(megalomaniac.calculateAge()).toBe(___);
-  });
-
-  describe("'in' keyword", function () {
-    var megalomaniac;
-    beforeEach(function () {
+    beforeEach(() => {
       megalomaniac = {
         mastermind: "The Monarch",
         henchwoman: "Dr Girlfriend",
@@ -60,52 +60,41 @@ xdescribe("About Objects", function () {
       };
     });
 
-    it("should have the bomb", function () {
+    it("should have the bomb", () => {
 
-      var hasBomb = "theBomb" in megalomaniac;
+      const hasBomb = "theBomb" in megalomaniac;
 
-      expect(hasBomb).toBe(___);
+      expect(hasBomb).to.deep.equal(__);
     });
 
-    it("should not have the detonator however", function () {
+    it("should not have the detonator however", () => {
 
-      var hasDetonator = "theDetonator" in megalomaniac;
+      const hasDetonator = "theDetonator" in megalomaniac;
 
-      expect(hasDetonator).toBe(___);
+      expect(hasDetonator).to.deep.equal(___);
     });
   });
 
-  it("should know that properties can be added and deleted", function () {
-    var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
+  xdescribe("Prototype", () => {
+    it("should use prototype to add to all objects", () => {
 
-    expect("secretary" in megalomaniac).toBe(___);
-
-    megalomaniac.secretary = "Agent Smith";
-    expect("secretary" in megalomaniac).toBe(___);
-
-    delete megalomaniac.henchman;
-    expect("henchman" in megalomaniac).toBe(___);
-  });
-
-
-  it("should use prototype to add to all objects", function () {
-      function Circle(radius)
-      {
+      function Circle(radius){
         this.radius = radius;
       }
 
-      var simpleCircle = new Circle(10);
-      var colouredCircle = new Circle(5);
+      let circle = new Circle(10);
+      const colouredCircle = new Circle(5);
       colouredCircle.colour = "red";
 
-      expect(simpleCircle.colour).toBe(___);
-      expect(colouredCircle.colour).toBe(___);
+      expect(simpleCircle.colour).to.equal(__);
+      expect(colouredCircle.colour).to.deep.equal(__);
 
-      Circle.prototype.describe = function () {
+      Circle.prototype.describe = () => {
         return "This circle has a radius of: " + this.radius;
       };
 
-      expect(simpleCircle.describe()).toBe(___);
-      expect(colouredCircle.describe()).toBe(___);
+      expect(simpleCircle.describe()).to.deep.equal(__);
+      expect(colouredCircle.describe()).to.deep.equal(__);
+    });
   });
 });
