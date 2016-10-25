@@ -1,12 +1,12 @@
 /**
 * Context in JavaScript
 **/
-var expect = require('chai').expect;
+const expect = require('chai').expect;
 
-xdescribe('Context in JavaScript', function(){
+xdescribe('Context in JavaScript', () => {
 
   var company = {
-    name: 'Philos Lab',
+    name: 'Hackages Lab',
     mentors: ['Alex', 'Brecht', 'Davy'],
     addMentor: function(name){
       this.mentors.push('Juan');
@@ -14,10 +14,10 @@ xdescribe('Context in JavaScript', function(){
     }
   };
 
-  it('What is "this" refer to?', function(){
+  it('What is "this" refer to?', () => {
     var context = company.addMentor();
     // Fill in the expectation
-    expect().toEqual();
+    expect().to.equal();
 
 
     //-------------------------------------------------------
@@ -29,7 +29,7 @@ xdescribe('Context in JavaScript', function(){
 
     var result = context();
     // Fill in the expectation
-    expect().toEqual();
+    expect().to.equal();
 
 
     //-------------------------------------------------------
@@ -41,12 +41,12 @@ xdescribe('Context in JavaScript', function(){
 
     var result = context();
     // Fill in the expectation
-    expect().toEqual();
+    expect().to.equal();
   });
 
-  it('Should switch the context', function(){
+  it('Should switch the context', () => {
     var context = company.addMentor();
-    expect(context).toEqual({name: 'Wemanity'});
+    expect(context).to.equal({name: 'Hackages'});
   });
 
 });

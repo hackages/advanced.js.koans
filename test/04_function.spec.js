@@ -1,12 +1,12 @@
 var expect = require('chai').expect;
 
-xdescribe("About Functions", function() {
+xdescribe("About Functions", () => {
 
-  it("should declare function: add", function() {
-    expect(add(1, 2)).toBe(___);
+  it("should declare function: add", () => {
+    expect(add(1, 2)).to.equal(__);
   });
 
-  it("should know internal variables override outer variables", function () {
+  it("should know internal variables override outer variables", () => {
     var message = "Outer";
 
     function getMessage() {
@@ -18,12 +18,12 @@ xdescribe("About Functions", function() {
       return message;
     }
 
-    expect(getMessage()).toBe(___);
-    expect(overrideMessage()).toBe(___);
-    expect(message).toBe(___);
+    expect(getMessage()).to.equal(__);
+    expect(overrideMessage()).to.equal(__);
+    expect(message).to.equal(__);
   });
 
-  it("should have lexical scoping", function () {
+  it("should have lexical scoping", () => {
     var variable = "top-level";
     function parentfunction() {
       var variable = "local";
@@ -32,39 +32,37 @@ xdescribe("About Functions", function() {
       }
       return childfunction();
     }
-    expect(parentfunction()).toBe(___);
+    expect(parentfunction()).to.equal(__);
   });
 
-  it("should use lexical scoping to synthesise functions", function () {
+  it("should use lexical scoping to synthesise functions", () => {
 
-    function makeMysteryFunction(makerValue)
-    {
-      var newFunction = function doMysteriousThing(param)
-      {
+    function makeMysteryFunction(makerValue) {
+      const newFunction = function doMysteriousThing(param) {
         return makerValue + param;
       };
       return newFunction;
     }
 
-    var mysteryFunction3 = makeMysteryFunction(3);
-    var mysteryFunction5 = makeMysteryFunction(5);
+    const mysteryFunction3 = makeMysteryFunction(3);
+    const mysteryFunction5 = makeMysteryFunction(5);
 
-    expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(___);
+    expect(mysteryFunction3(10) + mysteryFunction5(5)).to.equal(__);
   });
 
-  it("should allow extra function arguments", function () {
+  it("should allow extra function arguments", () => {
 
     function returnFirstArg(firstArg) {
       return firstArg;
     }
 
-    expect(returnFirstArg("first", "second", "third")).toBe(___);
+    expect(returnFirstArg("first", "second", "third")).to.equal(__);
 
     function returnSecondArg(firstArg, secondArg) {
       return secondArg;
     }
 
-    expect(returnSecondArg("arguments")).toBe(___);
+    expect(returnSecondArg("arguments")).to.equal(__);
 
     function returnAllArgs() {
       var argsArray = [];
@@ -74,6 +72,6 @@ xdescribe("About Functions", function() {
       return argsArray.join(",");
     }
 
-    expect(returnAllArgs("first", "second", "third")).toBe(___);
+    expect(returnAllArgs("first", "second", "third")).to.equal(__);
   });
 });
