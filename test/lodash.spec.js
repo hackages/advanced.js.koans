@@ -5,7 +5,7 @@ chai.should();
 
 const _ = require('../src/');
 
-describe('Underscore library', ()=>{
+describe('Lodash library', ()=>{
 
   describe('identity', ()=>{
 
