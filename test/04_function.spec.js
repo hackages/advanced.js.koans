@@ -14,7 +14,7 @@ xdescribe("About Functions", () => {
     }
 
     function overrideMessage() {
-      var message = "Inner";
+      message = "Inner";
       return message;
     }
 
