@@ -63,7 +63,8 @@ xdescribe("About Functions", () => {
     }
 
     expect(returnSecondArg("arguments")).to.equal(__);
-
+    
+    // TODO: Fix the function to return all arguments. Hint: slice
     function returnAllArgs() {
       var argsArray = [];
       for (var i = 0; i < arguments.length; i += 1) {
