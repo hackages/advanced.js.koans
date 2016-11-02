@@ -6,7 +6,7 @@ describe("About Mutability", () => {
     const aPerson = {firstname: "John", lastname: "Smith" };
     aPerson.firstname = "Alan";
 
-    expect(aPerson.firstname).to.equal("Alan");
+    expect(aPerson.firstname).to.equal(__);
   });
 
   it("should understand that constructed properties are public and mutable", () => {
