@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const expect = chai.expect;
 chai.should();
 
-const _ = require('../src/');
+const _ = require('../src/lodash');
 
 describe('Lodash library', ()=>{
 
