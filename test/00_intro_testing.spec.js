@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 
 // documentation for the chai#expect http://chaijs.com/api/bdd/
 
-xdescribe('Introductio to Mocha and WallabyJS', () => {
+xdescribe('Introduction to Mocha and WallabyJS', () => {
 
   // You can disable test by adding an 'x' in front of the runner
   it('Disable this test', () => {
