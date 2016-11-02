@@ -30,7 +30,7 @@
     "build": "webpack -w",
     "start": "npm-run-all --parallel build live",
     "debug": "node-debug src/index.js",
-    "prestart": "yarn install"
+    "prestart": "npm install"
   },
   "repository": {
     "type": "git",
