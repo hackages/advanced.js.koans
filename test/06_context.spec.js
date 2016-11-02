@@ -19,19 +19,6 @@ xdescribe('Context in JavaScript', () => {
     // Fill in the expectation
     expect().to.equal();
 
-
-    //-------------------------------------------------------
-    var context = function(){
-      return function init(){
-        return this;
-      }();
-    };
-
-    var result = context();
-    // Fill in the expectation
-    expect().to.equal();
-
-
     //-------------------------------------------------------
     var context = function(){
       return function init(){
