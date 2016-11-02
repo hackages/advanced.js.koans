@@ -82,7 +82,7 @@ describe("About Objects", () => {
         this.radius = radius;
       }
 
-      let circle = new Circle(10);
+      let simpleCircle = new Circle(10);
       const colouredCircle = new Circle(5);
       colouredCircle.colour = "red";
 
