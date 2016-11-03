@@ -3,3 +3,4 @@ solution/
 esdoc/
 test/dist/*
 yarn.lock
+.DS_Store
