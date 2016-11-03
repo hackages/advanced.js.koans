@@ -9,7 +9,7 @@ module.exports = {
     '04_function': './test/04_function.spec.js',
     '05_inheritance': './test/05_inheritance.spec.js',
     '06_context': './test/06_context.spec.js',
-    'lodash': './test/lodash.spec.js'
+    '07_lodash': './test/07_lodash.spec.js'
   },
   output: {
     filename: '[name].spec.js',
