@@ -1,13 +1,13 @@
-var expect = require('chai').expect;
+import { expect } from 'chai';
 
-xdescribe("About Functions", () => {
+describe("About Functions", () => {
 
   it("should declare function: add", () => {
     expect(add(1, 2)).to.equal(__);
   });
 
   it("should know internal variables override outer variables", () => {
-    var message = "Outer";
+    let message = "Outer";
 
     function getMessage() {
       return message;
@@ -24,9 +24,9 @@ xdescribe("About Functions", () => {
   });
 
   it("should have lexical scoping", () => {
-    var variable = "top-level";
+    let variable = "top-level";
     function parentfunction() {
-      var variable = "local";
+      let variable = "local";
       function childfunction() {
         return variable;
       }
@@ -63,11 +63,11 @@ xdescribe("About Functions", () => {
     }
 
     expect(returnSecondArg("arguments")).to.equal(__);
-    
+
     // TODO: Fix the function to return all arguments. Hint: slice
     function returnAllArgs() {
-      var argsArray = [];
-      for (var i = 0; i < arguments.length; i += 1) {
+      const argsArray = [];
+      for (let i = 0; i < arguments.length; i += 1) {
         argsArray.push(arguments[i]);
       }
       return argsArray.join(",");

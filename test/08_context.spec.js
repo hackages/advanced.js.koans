@@ -1,14 +1,10 @@
-const expect = require('chai').expect;
-require('chai').should();
+import { expect } from 'chai';
 
 /**
 * Context in JavaScript
 **/
 
 describe('Context in JavaScript', () => {
-
-
-
 
   describe('Should use call & apply', () => {
 
