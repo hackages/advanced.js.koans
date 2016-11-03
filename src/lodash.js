@@ -1,5 +1,5 @@
 
-// TODO: Implement these fonctions and make them available for using in the web and for node
+// TODO: Implement these functions and make them available for using in the web and for node
 
 /**
 ** @author {your name}

@@ -2,6 +2,8 @@ const chai = require('chai');
 const expect = chai.expect;
 chai.should();
 
+// TODO: Implement these functions in ../src/lodash.js
+
 const _ = require('../src/lodash');
 
 describe('Lodash library', function(){
