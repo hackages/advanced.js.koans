@@ -4,3 +4,6 @@ esdoc/
 test/dist/*
 yarn.lock
 .DS_Store
+.idea
+npm-debug.log
+coverage
