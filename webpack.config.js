@@ -7,7 +7,6 @@ module.exports = {
     '02_object': './test/02_object.spec.js',
     '03_mutability': './test/03_mutability.spec.js',
     '04_function': './test/04_function.spec.js',
-    '05_inheritance': './test/05_inheritance.spec.js',
     '05_pseudoclassical.pattern': './test/05_pseudoclassical.pattern.spec.js',
     '06_functional.pattern': './test/06_functional.pattern.spec.js',
     '07_prototypal.pattern': './test/07_prototypal.pattern.spec.js',
