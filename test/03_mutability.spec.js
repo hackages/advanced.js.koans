@@ -1,21 +1,21 @@
-const expect = require('chai').expect;
+import { expect } from 'chai';
 
 describe("About Mutability", () => {
 
   it("should expect object properties to be public and mutable", () => {
-    const aPerson = {firstname: "John", lastname: "Smith" };
+    const aPerson = { firstname: "John", lastname: "Smith" };
     aPerson.firstname = "Alan";
 
-    expect(aPerson.firstname).to.equal("Alan");
+    expect(aPerson.firstname).to.equal(__);
   });
 
   it("should understand that constructed properties are public and mutable", () => {
-    function Person(firstname, lastname){
+    function Person(firstname, lastname) {
       this.firstname = firstname;
       this.lastname = lastname;
     }
 
-    const aPerson = new Person ("John", "Smith");
+    const aPerson = new Person("John", "Smith");
     aPerson.firstname = "Alan";
 
     expect(aPerson.firstname).to.equal(__);
@@ -31,7 +31,7 @@ describe("About Mutability", () => {
       return this.firstname + " " + this.lastname;
     };
 
-    const aPerson = new Person ("John", "Smith");
+    const aPerson = new Person("John", "Smith");
     expect(aPerson.getFullName()).to.equal(__);
 
     aPerson.getFullName = function () {
@@ -49,7 +49,7 @@ describe("About Mutability", () => {
       this.getLastName = function () { return lastname; };
       this.getFullName = function () { return fullName; };
     }
-    const aPerson = new Person ("John", "Smith");
+    const aPerson = new Person("John", "Smith");
 
     aPerson.firstname = "Penny";
     aPerson.lastname = "Andrews";

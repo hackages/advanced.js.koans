@@ -1,12 +1,12 @@
-const expect = require('chai').expect;
+import { expect } from 'chai';
 
 describe("About Objects", () => {
 
-  xdescribe("Properties", () => {
+  describe("Properties", () => {
     let megalomaniac;
 
     beforeEach(() => {
-       megalomaniac = {  mastermind: "Joker", henchwoman: "Harley" };
+      megalomaniac = { mastermind: "Joker", henchwoman: "Harley" };
     });
 
     it("should confirm objects are collections of properties", () => {
@@ -19,7 +19,7 @@ describe("About Objects", () => {
     });
 
     it("should know that properties can be added and deleted", () => {
-      const megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
+      const megalomaniac = { mastermind: "Agent Smith", henchman: "Agent Smith" };
 
       expect("secretary" in megalomaniac).to.equal(__);
 
@@ -31,7 +31,7 @@ describe("About Objects", () => {
     });
   });
 
-  xdescribe("'this' context", () => {
+  describe("'this' context", () => {
     it("should confirm that when a function is attached to an object, 'this' refers to the object", () => {
       let currentDate = new Date();
       let currentYear = (currentDate.getFullYear());
@@ -49,7 +49,7 @@ describe("About Objects", () => {
     });
   });
 
-  xdescribe("'in' keyword", () => {
+  describe("'in' keyword", () => {
     let megalomaniac;
 
     beforeEach(() => {
@@ -75,14 +75,14 @@ describe("About Objects", () => {
     });
   });
 
-  xdescribe("Prototype", () => {
+  describe("Prototype", () => {
     it("should use prototype to add to all objects", () => {
 
-      function Circle(radius){
+      function Circle(radius) {
         this.radius = radius;
       }
 
-      let circle = new Circle(10);
+      let simpleCircle = new Circle(10);
       const colouredCircle = new Circle(5);
       colouredCircle.colour = "red";
 

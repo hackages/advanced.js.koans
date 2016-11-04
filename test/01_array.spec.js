@@ -1,6 +1,6 @@
-const expect = require('chai').expect;
+import { expect } from 'chai';
 
-xdescribe("About Arrays", () => {
+describe("About Arrays", () => {
   //We shall contemplate truth by testing reality, via spec expectations.
   it("should create arrays", () => {
     const emptyArray = [];

@@ -1,8 +1,8 @@
-const expect = require('chai').expect;
+import { expect } from 'chai';
 
 // documentation for the chai#expect http://chaijs.com/api/bdd/
 
-xdescribe('Introductio to Mocha and WallabyJS', () => {
+describe('Introduction to Mocha and WallabyJS', () => {
 
   // You can disable test by adding an 'x' in front of the runner
   it('Disable this test', () => {
