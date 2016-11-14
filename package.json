@@ -1,5 +1,5 @@
 {
-  "name": "javascript.koans",
+  "name": "advanced.js.koans",
   "version": "1.0.0",
   "description": "In this set of examples and tests we cover advanced JavaScript concepts such as closure, inheritance, variable hoisting, 'this' with context switch...",
   "main": "index.js",
