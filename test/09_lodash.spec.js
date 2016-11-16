@@ -41,7 +41,7 @@ describe('Lodash library', function () {
     })
   });
 
-  xdescribe('last', function () {
+  describe('last', function () {
     let items;
 
     beforeEach(function () {
@@ -66,7 +66,7 @@ describe('Lodash library', function () {
     });
   });
 
-  xdescribe('isArray', function () {
+  describe('isArray', function () {
     const items = [10, false, 'Hacklunch'];
 
     it('Should return true when passed an collection of elements', function () {
@@ -82,7 +82,7 @@ describe('Lodash library', function () {
     });
 
     it('arguments is not an Array', function () {
-      _.isArray(items)
+      isArray(items)
 
       function isArray() {
         expect(_.isArray(arguments)).to.equal(false);
@@ -90,7 +90,7 @@ describe('Lodash library', function () {
     });
   });
 
-  xdescribe('isDefined', function () {
+  describe('isDefined', function () {
     it('Happy path', function () {
       expect(_.isDefined([])).equal(true);
       expect(_.isDefined(12)).equal(true);
@@ -106,14 +106,14 @@ describe('Lodash library', function () {
     });
   });
 
-  xdescribe('isFunction', function () {
+  describe('isFunction', function () {
     it('Should return true when passed an anonymous function', function () {
-      _.isFunction(function () { }).equal(true);
-      _.isFunction(function () { }).equal(true);
+      expect(_.isFunction(function () { })).equal(true);
+      expect(_.isFunction(function () { })).equal(true);
     });
 
     it('Should return true when passed a named function', function () {
-      const sum = (x, y) => x + y;
+      const sum = function (x, y) { return x + y };
       expect(_.isFunction(sum)).equal(true);
     });
 
@@ -131,7 +131,7 @@ describe('Lodash library', function () {
     });
   });
 
-  xdescribe('isNumber', function () {
+  describe('isNumber', function () {
     it('Should return true when passed any number', function () {
       expect(_.isNumber(12)).equal(true);
       expect(_.isNumber(1.2)).equal(true);
@@ -204,13 +204,13 @@ describe('Lodash library', function () {
     });
   });
 
-  xdescribe('slice', function () {
+  describe('slice', function () {
     it('Should return a new array', function () {
       // TODO: write and implement the specs for this function
     });
   });
 
-  xdescribe('splice', function () {
+  describe('splice', function () {
     it('Should return a new array', function () {
       // TODO: write and implement the specs for this function
     });
@@ -223,19 +223,19 @@ describe('Lodash library', function () {
     });
 
     it('should return undefined if none of the elements match the predicate', function () {
-      const isEven = (num) => { num % 2 === 0; };
+      const isEven = function (num) { return num % 2 === 0 };
       const evens = _.find([1, 3, 7, 5], isEven);
       expect(evens).equal('undefined');
     });
 
     it('should return the first element that matchs the predicate', function () {
-      const isOdd = function (num) { num % 2 !== 0; };
+      const isOdd = function (num) { return num % 2 !== 0; };
       const odds = _.find([10, 2, 3, 4, 5, 6], isOdd);
       expect(odds).equal(3);
     });
   });
 
-  xdescribe('reduce', function () {
+ describe('reduce', function () {
     it('should be able to sum up an array', function () {
       const add = function (tally, item) { return tally + item; };
       const total = _.reduce([1, 2, 3], add, 0);
@@ -272,7 +272,6 @@ describe('Lodash library', function () {
       const to = {};
       const from = { a: 'b' };
       const extended = _.extend(to, from);
-
       expect(extended.a).to.equal('b');
     });
 
@@ -306,8 +305,7 @@ describe('Lodash library', function () {
 
     it('should copy undefined values', function () {
       const extended = _.extend({}, { a: void 0, b: null });
-
-      expect('a' in extended && 'b' in extended).to.be(true);
+      expect('a' in extended && 'b' in extended).equal(true);
     });
   });
 
