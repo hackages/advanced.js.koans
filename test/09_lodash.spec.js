@@ -109,7 +109,6 @@ describe('Lodash library', function () {
   describe('isFunction', function () {
     it('Should return true when passed an anonymous function', function () {
       expect(_.isFunction(function () { })).equal(true);
-      expect(_.isFunction(function () { })).equal(true);
     });
 
     it('Should return true when passed a named function', function () {
