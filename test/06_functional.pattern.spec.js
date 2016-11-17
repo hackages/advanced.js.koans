@@ -39,10 +39,11 @@ describe('JavaScript Inheritance Functional Patterns', () => {
     // Where was he born?
   });
 
-  // Changing the planetOfBirth for the dog to "Pluton"
-  dog.planetOfBirth = "Pluton";
+
 
   it('Analysing dog and cat', () => {
+    // Changing the planetOfBirth for the dog to "Pluton"
+    dog.planetOfBirth = "Pluton";
     // Where were they born?
   });
 });

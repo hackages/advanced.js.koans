@@ -40,10 +40,9 @@ describe('JavaScript Inheritance Prototypal Patterns', () => {
     // Where was she born?
   });
 
-  // Changing the planetOfBirth for the Male to "Pluton"
-  Male.prototype.planetOfBirth = "Pluton";
-
   it('Analysing dog and cat', () => {
+    // Changing the planetOfBirth for the Male to "Pluton"
+    Male.prototype.planetOfBirth = "Pluton";
     // Where were they born?
   });
 });

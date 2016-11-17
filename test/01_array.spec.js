@@ -18,6 +18,11 @@ describe("About Arrays", () => {
 
   it("should understand array literals", () => {
     const array = [];
+
+    // Oops
+    expect(array).to.not.equal([]);
+
+    // Introducing ... deep equal
     expect(array).to.deep.equal(__);
 
     array[0] = 1;

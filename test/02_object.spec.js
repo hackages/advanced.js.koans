@@ -39,7 +39,7 @@ describe("About Objects", () => {
         mastermind: "James Wood",
         henchman: "Adam West",
         birthYear: 1970,
-        calculateAge: () => {
+        calculateAge: function() {
           return currentYear - this.birthYear;
         }
       };
@@ -89,7 +89,7 @@ describe("About Objects", () => {
       expect(simpleCircle.colour).to.equal(__);
       expect(colouredCircle.colour).to.deep.equal(__);
 
-      Circle.prototype.describe = () => {
+      Circle.prototype.describe = function() {
         return "This circle has a radius of: " + this.radius;
       };
 

@@ -23,7 +23,7 @@ describe('JavaScript Inheritance Pseudoclassical Patterns', () => {
     this.gender = 'Male';
   };
 
-  // Customer inherit from Person
+  // Male inherits from Animal
   extendPrototype(Male, Animal);
 
 
@@ -38,7 +38,7 @@ describe('JavaScript Inheritance Pseudoclassical Patterns', () => {
     this.gender = 'Female'; // By default we set it
   };
 
-  // Employee inherit from Person
+  // Female inherit from Animal
   extendPrototype(Female, Animal);
 
 
@@ -48,10 +48,9 @@ describe('JavaScript Inheritance Pseudoclassical Patterns', () => {
     // Where was she born?
   });
 
-  // Changing the planetOfBirth for the Male to "Pluton"
-  Male.prototype.planetOfBirth = "Pluton";
-
   it('Analysing dog and cat', () => {
-    // Where were they born?
+    // Changing the planetOfBirth for the Male to "Pluton"
+    Male.prototype.planetOfBirth = "Pluton";
+    // Where were they born? (dog and cat)
   });
 });

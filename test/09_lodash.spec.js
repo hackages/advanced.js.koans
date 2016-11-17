@@ -309,7 +309,7 @@ describe('Lodash library', function () {
     });
   });
 
-
+  // Implement the tests below
   describe('findIndex', function () { });
 
   describe('fill', function () { });
