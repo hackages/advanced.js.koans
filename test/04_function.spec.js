@@ -66,11 +66,7 @@ describe("About Functions", () => {
 
     // TODO: Fix the function to return all arguments. Hint: slice
     function returnAllArgs() {
-      const argsArray = [];
-      for (let i = 0; i < arguments.length; i += 1) {
-        argsArray.push(arguments[i]);
-      }
-      return argsArray.join(",");
+      
     }
 
     expect(returnAllArgs("first", "second", "third")).to.equal(__);
