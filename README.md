@@ -6,15 +6,37 @@ In this set of examples and tests we cover advanced JavaScript concepts such as
  - variable hoisting
  - 'this' with context switch...
 
-Clone this repository from Github and run `npm start`
+### Quick start
+**Make sure you have Node version >= 6.0 and NPM >= 3**
 
-`npm start` will open your test in a browser. Now open your IDE and fix the tests inside the test folder
+> Clone/Download the repo then edit `*.spec.js` files inside [`/test/`](/test/)
 
-If you only want to run your tests in the console, just run `npm test`
+> Replace all `__` to fix failing tests
 
-We use Mocha in this repository.
+```bash
+# clone our repo
+git clone https://github.com/hackages/javascript.koans.git
 
-This repository is also configured to run with WallabyJS.
+# change directory to our repo
+cd advanced.js.koans
+
+# start the server (`npm install` will be performed for you)
+npm start
+
+# start your tests in the console (`npm install` will be performed for you)
+npm test
+
+```
+go to [http://localhost:8080](http://localhost:8080) in your browser
+
+**We use Mocha in this repository**
+
+**For those using `yarn`, make sure to remove the `prestart` script before running `yarn**
+
+**For those using **WallabyJS**, just run it and you'll be on your way to master JS syntax**
+
+
+## Contributing
 
 Feel free to send us PRs
 
