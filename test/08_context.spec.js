@@ -3,7 +3,6 @@ import { expect } from 'chai';
 /**
 * Context in JavaScript
 **/
-
 describe('Context in JavaScript', () => {
 
   describe('Should use call & apply', () => {
@@ -22,7 +21,7 @@ describe('Context in JavaScript', () => {
 
     it('with call', () => {
 
-      // TODO Modify the code above to satisfy all the assertions below.
+      // TODO Modify the call below to satisfy all the assertions below.
       const actual = upperCase();
 
       expect(actual).equal('JUAN');
@@ -32,7 +31,7 @@ describe('Context in JavaScript', () => {
 
       const numberToUse = 5.56789;
 
-      // TODO Modify the code above to satisfy all the assertions below.
+      // TODO Modify the call below to satisfy all the assertions below.
       const actual = toFixed();
 
       expect(actual).equal('5.57');
@@ -40,7 +39,7 @@ describe('Context in JavaScript', () => {
 
     it('with apply and arguments', () => {
 
-      // TODO Modify the code above to satisfy all the assertions below.
+      // TODO Modify the code below to satisfy all the assertions below.
       const actual = concat();
 
       expect(actual).eql([1, 2, 3, 4]);
@@ -54,7 +53,7 @@ describe('Context in JavaScript', () => {
       const counter = {
         value: 0,
       };
-      // TODO Modify the code above to satisfy all the assertions below.
+      // TODO Modify the code below to satisfy all the assertions below.
       function increment() {
         this.value++;
         if (this.value === 10) {
@@ -70,7 +69,7 @@ describe('Context in JavaScript', () => {
       const hackcamp = {
         members: ['Davy']
       };
-      // TODO Modify the code above to satisfy all the assertions below.
+      // TODO Modify the code below to satisfy all the assertions below.
       function addMembers() {
         this.members.push('Joker');
         expect(this.members.length).equal(2);
@@ -126,7 +125,7 @@ describe('Context in JavaScript', () => {
 
     it("with 'new' keywords ", () => {
 
-      // TODO Modify the code above to satisfy all the assertions below.
+      // TODO Modify the code below to satisfy all the assertions below.
       function User(args) {
         function init() {
           this.name = args.name;
