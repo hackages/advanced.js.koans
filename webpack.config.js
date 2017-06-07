@@ -11,7 +11,8 @@ module.exports = {
     '06_functional.pattern': './test/06_functional.pattern.spec.js',
     '07_prototypal.pattern': './test/07_prototypal.pattern.spec.js',
     '08_context': './test/08_context.spec.js',
-    '09_lodash': './test/09_lodash.spec.js'
+    '09_async_await': './test/09_async_await.spec.js',
+    '10_lodash': './test/10_lodash.spec.js'
   },
   output: {
     filename: '[name].spec.js',
