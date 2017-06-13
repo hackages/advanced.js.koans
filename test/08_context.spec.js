@@ -64,7 +64,7 @@ describe('Context in JavaScript', () => {
       setInterval(increment, 1000);
     });
 
-    it('push a new user after 2s', (done) => {
+    it('push a new user after 1s', (done) => {
 
       const hackcamp = {
         members: ['Davy']
@@ -75,7 +75,7 @@ describe('Context in JavaScript', () => {
         expect(this.members.length).equal(2);
         done();
       }
-      setTimeout(addMembers, 2000);
+      setTimeout(addMembers, 1000);
     });
   });
 
