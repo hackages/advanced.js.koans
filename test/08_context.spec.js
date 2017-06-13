@@ -94,7 +94,7 @@ describe('Context in JavaScript', () => {
       };
       const actual = company.addMentor('Juan');
 
-      expect(actual).to.be.equal(['Alex', 'Juan']);
+      expect(actual).to.be.deep.equal(['Alex', 'Juan']);
     });
 
     it('Should switch the context', () => {
@@ -107,7 +107,7 @@ describe('Context in JavaScript', () => {
       // TODO Modify the code above to satisfy all the assertions below.
       let actual = addMentor(davy);
 
-      expect(actual).to.equal(['Eric', 'Martine', 'Joker']);
+      expect(actual).to.deep.equal(['Eric', 'Martine', 'Joker']);
 
       const hackjam = {
         mentors: ['Harold', 'Bouba', 'Ilyes'],
@@ -116,7 +116,7 @@ describe('Context in JavaScript', () => {
       // TODO Modify the code above to satisfy all the assertions below.
       actual = addMentor(davy);
 
-      expect(actual).to.equal(['Harold', 'Bouba', 'Ilyes', 'Joker']);
+      expect(actual).to.deep.equal(['Harold', 'Bouba', 'Ilyes', 'Joker']);
     });
 
   });
