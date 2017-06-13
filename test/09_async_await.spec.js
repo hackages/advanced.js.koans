@@ -19,6 +19,13 @@ describe('Async await', () => {
 
       func();
     });
-  });
 
+    it('Make this code work with async/await', (done) => {
+      const organisationName = 'Hackages';
+      let organisation = fetch(`https://api.github.com/orgs/${organisationName}`);
+      organisation = organisation.json();
+      expect(organisation.email).to.equal('007@hackages.io');
+      done();
+    });
+  });
 });
