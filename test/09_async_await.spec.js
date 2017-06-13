@@ -27,5 +27,18 @@ describe('Async await', () => {
       expect(organisation.email).to.equal('007@hackages.io');
       done();
     });
+
+    it('Add results of asyncs actions', (done) => {
+      const prom1 = () => new Promise((resolve) => {
+        setTimeout(() => resolve(2), 200);
+      });
+      const prom2 = () => new Promise((resolve) => {
+        setTimeout(() => resolve(2), 200);
+      });
+
+      //TODO write a function that will wait until both promises (written above) resolve and then sum their result
+
+    });
   });
 });
+
