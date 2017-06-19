@@ -2,7 +2,7 @@ import { expect } from 'chai';
 
 describe('JavaScript Inheritance Pseudoclassical Patterns', () => {
 
-  const extendPrototype = (child, parent) => {
+  const extendPrototype = function(child, parent) {
     child.prototype = parent.prototype;
   };
 
